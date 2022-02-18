@@ -6,13 +6,13 @@ function range(start, end) {
  	return sequence;
  }
 
-function sum (array) {
+function sum (array, step = 1) {
 	let sum = 0;
-	for (i = 0; i < array.length; i++) {
+	for (i = 0; i < array.length; i += step) {
 		sum += array[i];
 	}
 	return sum;
 }
 
 
-console.log(sum(range(1, 10)));
+console.log(sum(range(1, 10), 4));
